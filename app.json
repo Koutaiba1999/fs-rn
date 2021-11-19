@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "tfd-rn-appver1",
-    "slug": "tfd-rn-appver1",
+    "name": "fruitStock",
+    "slug": "fruitStock",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/fruit.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.koutaiba1999.fruitStock"
     },
     "web": {
       "favicon": "./assets/favicon.png"

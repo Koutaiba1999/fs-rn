@@ -15,7 +15,7 @@ import { AuthContext } from "../helpers/context";
 import { useSelector, useDispatch } from "react-redux";
 
 
-
+// ecran pour navigation lorsque on connecte 
 export function DrawerContent(props) {
   const authState = useSelector((state) => state.authState);
   const { signOut } = useContext(AuthContext);

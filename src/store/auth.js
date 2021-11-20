@@ -7,17 +7,19 @@ const SET_ORGANIZATION = "setOrganization";
 
 
 // Actions
-export const retrieveData = ({ userToken, member, orgId }) => {
+//une action pour schanger les variables user token et membre
+export const retrieveData = ({ userToken, member }) => {
     return {
         type: RETRIEVE_DATA,
         payload: {
             userToken,
             member,
-            orgId,
+            
             isLoading: false,
         },
     };
 };
+//action pour stocker les informations d utilisateur lorsque il connecte
 export const login = (userToken, member) => {
     return {
         type: LOGIN,
@@ -28,6 +30,7 @@ export const login = (userToken, member) => {
         },
     };
 };
+//action pour supprimer les informations de l'utilisateur lors de déconnexion
 export const logout = () => {
     return {
         type: LOGOUT,
@@ -38,6 +41,7 @@ export const logout = () => {
         },
     };
 };
+//action pour stocker les informations d inscription 
 export const register = (data, token) => {
     return {
         type: REGISTER,
@@ -50,14 +54,7 @@ export const register = (data, token) => {
 };
 
 
-export const setStateConnection = (isConnected) => {
-    return {
-        type: SET_ORGANIZATION,
-        payload: {
-            isConnected,
-        },
-    };
-};
+
 
 
 
@@ -67,9 +64,9 @@ const initState = {
     userToken: null,
     member: {},
     
-    isConnected: true,
+    
 };
-
+// selon le type d'action on change une variable du store
 export default function reducer(state = initState, action) {
     switch (action.type) {
         case RETRIEVE_DATA:

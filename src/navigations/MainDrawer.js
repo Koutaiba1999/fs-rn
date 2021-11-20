@@ -16,7 +16,7 @@ import { DrawerContent } from "../screens/DrawerContent";
 import StockScreenIndex from "../screens/StockScreen/StockScreenIndex";
 import { useSelector } from "react-redux";
 
-
+// c'est pour définir nos écrans 
 const StockStack = createStackNavigator();
 const StockStackScreen = ({ navigation }) => (
   <StockStack.Navigator

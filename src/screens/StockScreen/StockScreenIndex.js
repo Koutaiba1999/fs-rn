@@ -15,7 +15,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import StockTransfert from "./components/Modals/StockTransfert";
 import { logout } from "../../store/auth";
 import { AuthContext } from "../../helpers/context";
-
+// écran pour afficher le stocke et faire des transferts 
 const StockScreenIndex = (props) => {
   const dispatch = useDispatch();
 

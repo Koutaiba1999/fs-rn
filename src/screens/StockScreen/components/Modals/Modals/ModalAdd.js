@@ -15,7 +15,7 @@ import {
   setStockData,
 } from "../../../../../store/stocks";
 import { getDataStock, updateStock } from "../../../../../services/stocks";
-
+// c'est le modal pour faire de transfert du stock 
 export default function ModalAdd({  }) {
   const state = useSelector((state) => state.stockState);
   const dispatch = useDispatch();

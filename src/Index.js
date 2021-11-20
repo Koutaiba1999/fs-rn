@@ -26,6 +26,7 @@ const App = () => {
   const authState = useSelector((state) => state.authState);
 
   const dispatch = useDispatch();
+  // cette fonction permet de sauvegarder l'utilisateur si il connecte ou le supprime si il déconnecte
   const authContext = useMemo(
     () => ({
       signIn: async (userToken, member) => {
@@ -51,7 +52,7 @@ const App = () => {
     }),
     []
   );
-
+//useeffect pour voir si on a un utilisateur connecter ou non 
   useEffect(() => {
     setTimeout(async () => {
       let member = null;
@@ -68,7 +69,7 @@ const App = () => {
   if (authState.isLoading) {
     return <SplashScreen />;
   }
-
+//retourner les écrans selon l'etat d utilisateur connecté ou non 
   return (
     <PaperProvider theme={theme}>
       <AuthContext.Provider value={authContext}>
